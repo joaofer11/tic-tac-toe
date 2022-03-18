@@ -1,0 +1,114 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: lightgray;
+}
+
+.jogo-da-velha {
+  display: none;
+  grid-template: repeat(3, 80px) / repeat(3, 80px);
+}
+.jogo-da-velha.visible {
+  display: grid;
+}
+
+.square1 {
+  border-right: 2px solid #000;
+  border-bottom: 2px solid #000;
+}
+
+.square2 {
+  border-right: 2px solid #000;
+  border-bottom: 2px solid #000;
+}
+
+.square3 {
+  border-bottom: 2px solid #000;
+}
+
+.square4 {
+  border-right: 2px solid #000;
+  border-bottom: 2px solid #000;
+}
+
+.square5 {
+  border-right: 2px solid #000;
+  border-bottom: 2px solid #000;
+}
+
+.square6 {
+  border-bottom: 2px solid #000;
+}
+
+.square7 {
+  border-right: 2px solid #000;
+}
+
+.square8 {
+ border-right: 2px solid #000; 
+}
+
+[class*="square"] {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font: normal bolder 3rem sans-serif;
+  text-transform: uppercase;
+}
+
+[class*="square"] > span.x-color {
+  color: #3F066F;
+}
+[class*="square"]>span.o-color {
+  color: #C30707;
+}
+
+
+
+/* SELECTION SCREEN */
+.selection-screen {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  align-items: center;
+  border: 3px solid #000;
+  padding: 10px;
+  text-align: center;
+  
+}
+
+.selection-screen > .selection {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  font: normal bold 3rem sans-serif;
+  text-transform: uppercase;
+}
+
+.selection > .player-x {
+  color: #3F066F;
+  background: none;
+  padding: 2px 14px;
+  transition: .1s;
+}
+
+.selection > .player-o {
+  color: #C30707;
+  background: none;
+  padding: 2px 14px;
+  transition: .1;
+}
+
+.player-x:hover, .player-o:hover {
+  background: rgba(0, 0, 0, .3);
+}
